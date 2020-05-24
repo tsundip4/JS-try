@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class in JS</title>
+	<h1 id="head"></h1>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+			// simple class in JS
+		/*
+
+		class Man{
+			constructor(naam){
+				this.naam = "sandeep";
+			}
+		}
+
+		manche = new Man;
+
+		document.getElementById("head").innerHTML = manche.naam;
+		*/
+
+		// class with two or more parameter
+		/*
+		class Detail{
+			constructor(fname, lname, address){
+				this.fname = fname;
+				this.lname = lname;
+				this.address = address;
+			}
+		}
+
+		manche = new Detail("sandeep", "Bashyal", "parsahawa");
+
+		document.getElementById("head").innerHTML = manche.fname;
+
+		*/
+
+
+		// class with methods
+		/*
+
+		class Naya{
+			constructor(nata){ // constructor is compulsory in js
+				this.nata = nata;
+			}
+
+			relation(x){// this is methods 
+				return x + "   "+"vanekai" +"  " + this.nata;
+
+			}
+		}
+
+		vanja = new Naya("daju");// object is created with parameter passing daju
+
+		document.getElementById("head").innerHTML = vanja.relation("vanja");
+		*/
+
+		// new class 
+		/*
+
+		class New{
+			constructor(parameter){
+				this.parameter = parameter;
+			}
+
+			naam(x, y){
+				return x+ "......."+ y + "-----" + this.parameter;
+			}
+		}
+
+		java = new New("rama");
+		document.getElementById("head").innerHTML = java.naam("gurjulal", "hiralal");// java is an object and naam is methods inside class with two parameters
+
+		*/
+
+       /*
+		class Dew{
+			constructor(x){
+				 this.x = x;
+			}
+			fanta(p, k){
+				return p + " " + k;
+			}
+			
+			}
+		
+
+		coke = new Dew("sandeep");
+		piku = new Dew();
+		//document.getElementById("head").innerHTML = coke.x;
+		document.getElementById("head").innerHTML = piku.fanta(24, 36);// accessing of methods 
+
+		*/
+
+		// inheritance in jS
+
+		class Coke{// class Coke is declared
+			constructor(chiso){
+
+				this.chiso = "coca-cola";
+
+			}
+			fanta(){// method fanta 
+				return "chiso vanekai" + "  "+this.chiso;
+			}
+
+		}
+
+		class Fanta extends Coke{// this is inheritance of class Coke, here fanta is child class
+			constructor(color,size, chiso){
+				super(chiso);// chiso is parameter which is in parent class within constructor so super is the method to call for parent
+				this.color = "orange";
+				this.size = "250 ml";
+			}
+
+			liquid(){// methods in child class
+				return this.fanta() +"<br>"+ this.color + "<br>"+this.size ;
+
+			}
+
+		}
+
+		let sprite = new Fanta("black", "250");
+		 document.getElementById("head").innerHTML  = sprite.liquid();
+
+		 
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form in JS</title>
+</head>
+<body>
+
+	<form onsubmit="return myfunc()" action=" array.html"><!-- here myfunc() will execute  if return is true and doesnot execute if reurn is fals  and action will be performed -->
+		<label>Name:</label>
+		<input id="un" type="text" name="uname"><br><br>
+		<label>Password:</label>
+		<input id="passw" type="Password" name="pass"><br><br>
+		<button id="buton" type="submit">Submit</button>
+
+
+	</form>
+
+	<script type="text/javascript">
+		let x = document.getElementById("un");
+		let y = document.getElementById("passw");
+
+		function myfunc(){
+			if(x.value.trim()==""){
+				alert("invalid: you cannot leave empty");// alert message will be performed once there will be nothing
+				document.getElementById("un").style.border = "1px solid red";
+				
+
+				return false;
+			}
+
+			else if(y.value.trim()==""){// trim() function will removes the space
+				alert("invalid: empty");
+
+				document.getElementById("passw").style.border = "1px solid red";
+				return false;
+
+			}
+			
+			else{
+				true;
+				
+			}
+		}
+
+
+		
+	</script>
+
+</body>
+</html>

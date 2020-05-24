@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>debug in JS</title>
+	<h1 id="head"></h1>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		// console.log(parameter) always provide the error that occurs while running code
+
+		//var x = 12;// here no error occurs as we declared variable with value 12
+
+		//var x; // it will so undefined
+
+		//console.log(x);
+		/*
+		for(let i=0; i<5; i++){
+			console.log(i);// this is ok since let is assigned within the bock
+
+		}
+
+
+		console.log(i);// since outside it is not defined
+		*/
+
+		// difference between let and const in console
+
+		// for let
+
+		/*
+		 function myfunc(){
+		 	let i = 10;
+		 	
+		 	for(let i=0; i<5; i++){
+		 		console.log(i);// this is valid in let variable
+
+		 	}
+
+		 }
+		 console.log(myfunc());
+		 */
+
+		 // for const
+
+		 const i=5;
+
+		 for(const i=0; i<5 ; i++){
+		 	console.log(i);// this cannot be done as we cant assign two value for const funct
+		 }
+
+		
+
+
+
+
+	</script>
+
+</body>
+</html>

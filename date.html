@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date in JS</title>
+	
+</head>
+<body>
+	<!--<h1>Please select any number between 1 to 7</h1>-->
+	
+	<!--<button  onclick="date()">Nepali time</button>-->
+    <!--<input  id="naam" value="">
+    <button onclick="weekdays()">Click me</button>-->
+    <!--<button onclick="name()">submit</button>-->
+    <h1 id="date1"></h1>
+
+	<script type="text/javascript">
+
+		
+
+
+
+
+
+		/*
+
+		function weekdays(){
+
+		var weekdays;
+
+		weekdays = document.getElementById("naam").value;// the value is assign to the weekdays what we input 
+
+		switch(weekdays){
+			case 1:
+			weekdays = "sunday";
+			break;
+
+			case 2:
+			weekdays = "monday";// break will break the case and will be out of switch
+			break;
+
+			case 3:
+			weekdays = "tuesday";
+			break;
+
+			default:
+			weekdays = "you are out of track";
+			break;
+		}
+		document.getElementById("date1").innerHTML = weekdays;
+	}
+*/
+		
+
+
+		// if else codidional statement
+		/*
+		var x = 15, y = 15;
+
+		if(x==y){
+			document.getElementById("date1").innerHTML = "this is number 15!";// when x and y are eual this statement will be display
+		}
+		else
+		{
+			document.getElementById("date1").innerHTML = "this is not number 15";// else this will be displayed
+		}
+	*/
+
+		// else if else condition
+		/*
+		var mins;
+
+		mins = new Date().getMinutes();
+
+		if(mins<15){
+			document.getElementById("date1").innerHTML = "time is less than 15 minutes";
+
+		}
+
+		else if(mins >= 30){
+			document.getElementById("date1").innerHTML = "you have 30 mins";
+
+		}
+
+		else{
+			document.getElementById("date1").innerHTML = "you have zero minute ";
+		}
+
+		*/
+		// ternary or conditional operator
+
+		/*
+
+		function name(){
+			var nam, publish;
+			nam = document.getElementById("naam").value;
+
+			publish = (nam=="sandeep") ? "your name is sandeep" : "you are not sandeep, i dont know you";
+			document.getElementById("date1").innerHTML = publish;
+
+		}
+		*/
+		/*
+		
+		function date(){
+			//document.getElementById("date1").innerHTML = new Date();// this will display date of crrent address
+			//document.getElementById("date1").innerHTML = new Date(2019, 10, 25, 12, 10, 0);
+			var miti;
+			// miti = new Date("2020-05-12"); //international standard form
+			// miti = new Date("05/12/2020");// short form
+			//miti = new Date("jan 15 2020");
+			miti = new Date();
+			 //document.getElementById("date1").innerHTML = miti.getMilliseconds();// get milliseconds fro the current date
+			 //miti.setFullYear(2015);// this will set the year of above current date where year is 2015 where month and day are same
+			 //document.getElementById("date1").innerHTML = miti.toDateString();// this will make date a more readable format
+			 document.getElementById("date1").innerHTML = miti;
+		}
+		*/
+		/*
+
+		var x = 9;
+		Math.pow(x,2);// return 4
+		Math.floor(9.5);// return 9
+		Math.sin(45 * PI/180); //degree other than radian is expressed
+
+		*/
+		//document.getElementById("date1").innerHTML = Math.random();// this will give any random number between 0 to 1
+
+		/*var x= 10, z= 17;
+
+		var y = Boolean(z>x);// here boolean will return true and is assigned to variable y
+
+		document.getElementById("date1").innerHTML = y;*/
+
+		// null value always return false
+
+		//x =null;
+
+		//document.getElementById("date1").innerHTML = Boolean(x);
+
+		// comparing operation
+
+		//var x = 5, y= 6;
+
+		//document.getElementById("date1").innerHTML = x<y;// return true since x is smaller than y
+
+		//document.getElementById("date1").innerHTML  = !(x==y);// x is not equal to y
+
+		//document.getElementById("date1").innerHTML = (x<10 && y>10);// return true if both are true and flase if one of them is fals 
+
+
+		
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

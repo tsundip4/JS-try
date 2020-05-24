@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loop in JS</title>
+</head>
+<body>
+	<h1 id="head"></h1>
+
+	<script type="text/javascript">
+
+
+		
+		//for loop in JS
+		/*
+		var nam = ["ram", "shyam", "hari", "Prem"];
+		var i;
+
+		for(i = 0; i < nam.length; i++){// i is initial value and i++ is increment after the condition is satisfied
+			document.getElementById("head").innerHTML += nam[i]+ "<br>";
+		}
+		*/
+
+		// for in loop in JS: it is used to execute properties of the object
+		/*
+
+		var detail = {fname:"sandeep", lastName:"Bashyal", address:"parsahawa"};// this is an object
+
+		var i, text = "";
+
+		for(i in detail){ //var i is in detail i.e  every properties are assigned to the variable i
+
+			text += detail[i] + "<br>"; // detail[i] gives the properties of each object
+
+		}
+		document.getElementById("head").innerHTML = text;
+		*/
+
+		// for/of loop: this loop is used to loop over arrays, strings, map and many more iterable data structure
+		// for/of loop over arrays
+		/*
+		var given = ["ram", "shyam", "shiva"];
+		var x;
+
+		for(x of given){// x will take the value of arrays
+			document.getElementById("head").innerHTML += x + "<br>";
+		}
+		*/
+
+		// for/of loop over strings
+		/*given = "sandeep";
+		var x;
+
+		for(x of given){// x will take the value of arrays
+			document.getElementById("head").innerHTML += x + "<br>";
+		}
+
+		*/
+
+		// while loop
+		/*
+		var naam = ["ram", "shyam", "prem"], i = 0;
+
+		while(i<naam.length){// here condition is set 
+			document.getElementById("head").innerHTML+= naam[i]+"<br>";
+
+			i++;// increment into the index
+
+		}
+	    */
+
+	    // break statement
+	    /*
+	    var i;
+
+	    for(i=0; i<5 ; i++){
+	    	if (i===4) {break;}// break will brak the code once the value of i is equal to 3
+	    	document.getElementById("head").innerHTML += i + "<br>";
+
+
+	    }
+		*/
+
+		// continue statement
+		/*
+
+		var i;
+
+	    for(i=0; i<5 ; i++){
+	    	if (i==2) {continue;}//continue will make the code to read all except 4
+	    	document.getElementById("head").innerHTML += i + "<br>";
+
+
+	    }
+	    */
+
+	    // search and replace()
+	    /*
+	    var he = "my name is sandeep";
+
+	    //var khoji = he.search("sandeep");
+	    var khoji = /name/.test(he);// this will test the whether the word "name " is present in the text or not
+
+	    document.getElementById("head").innerHTML  = khoji;
+		*/
+
+
+
+
+
+	</script>
+
+</body>
+</html>

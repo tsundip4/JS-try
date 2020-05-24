@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object in JS</title>
+</head>
+<body>
+	<h1 id="head"></h1>
+
+	<script type="text/javascript">
+		// object un js
+
+		//let detail = {fname:"sandy", lname:"Bashyal", address:"parsahawa"};// object declaration
+
+		//detail.language = "Nepali";// adding any properties in an object
+
+		//document.getElementById("head").innerHTML = detail.fname + "<br>" + detail.lname + "<br>" + detail.address + "<br>" + detail.language;// accessing of an array
+
+		// change an object properties
+		//detail.fname = "sandeep";
+		//document.getElementById("head").innerHTML = detail.fname + "<br>" + detail.lname + "<br>" + detail.address + "<br>" + detail.language
+
+		//use of for ... in loop
+
+		//var x;
+
+		/*for(x in detail){// x represent each properties value in detail
+			document.getElementById("head").innerHTML += detail[x] + "<br>"; // ways of accessing using loop in object
+		}*/
+
+
+		// method in object
+		/*
+
+		let detail = {fname:"sandy",
+					 lname:"Bashyal", 
+					 address:"parsahawa",
+					 date: new Date(),
+					 fulldetail: function()
+					 {return this.fname + "   " + this.address;}// this is method inside the object
+
+					};
+
+
+		//document.getElementById("head").innerHTML = detail.fulldetail();// this will access the method inside the object
+			//console.log(detail);
+
+			// ading any method in an object is easi in jS
+
+			detail.name = function(){
+				return "i love JS" + this.date;
+			}
+
+		document.getElementById("head").innerHTML = detail.name();// this will access the added method 
+
+		//console.log(name);// checking for an error of name properties in an object
+
+
+		// another way of displaying an object
+
+		var x = JSON.stringify(detail);// detail i.e object name is passed to JSON which is always comes with stringify
+		detail.fulldetail = detail.fulldetail.toString();
+
+		document.getElementById("head").innerHTML = x;
+		*/
+
+		// conctructor function in object
+
+		/*
+
+		function Detail(naam, saam, gaam) {
+			this.nnaam = naam;
+			this.nsaam = saam;
+			this.ngaam = gaam;
+			
+			};
+
+		var Ram = new Detail("sandeep", "hari", "shyam");// new object is created
+		var Kam = new Detail("sandy", "mendy", "pendy");// another object is created
+
+
+
+		// adding methods to above function
+		Ram.fname = function(){
+			return this.nnaam + "  " + this.ngaam; 
+		}
+
+		Kam.fnaam = function(){// another method is created and in the name of obect Kam
+			return this.nnaam + "            " + this.ngaam;
+		}
+
+		//document.getElementById("head").innerHTML = Ram.nnaam + "  "  + Ram.ngaam+"<br>"+ Kam.nnaam + " "+ Kam.nsaam+ "  " + Kam.ngaam;
+
+		document.getElementById("head").innerHTML = Ram.fname() + "<br>"+ Kam.fnaam();
+		*/
+
+
+		// prototype in onbject model in JS
+
+
+
+		function Detail(naam, saam, gaam) {
+			// instcance member
+			this.nnaam = naam;
+			this.nsaam = saam;
+			this.ngaam = gaam;
+			
+			};
+
+		var Ram = new Detail("sandeep", "hari", "shyam");// new object is created
+		var Kam = new Detail("sandy", "mendy", "pendy");// another object is created
+
+		// to add any properties for both object
+
+		Detail.prototype.address = "Nepali";// this will add feature for both object in Detail method
+
+		document.getElementById("head").innerHTML = Ram.address;
+
+		
+
+		
+
+
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

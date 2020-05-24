@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function in JS</title>
+</head>
+<body>
+	<h1 id="head"></h1>
+
+
+	<script type="text/javascript">
+
+		// function in JS
+		/*
+		var x = function(){
+			return "here i am";
+		};
+
+		document.getElementById("head").innerHTML = x();
+		*/
+
+		/*
+
+		function myFunc(){
+			return "here i am and i am another";
+		}
+		document.getElementById("head").innerHTML = myFunc();
+		*/
+
+		// function with parameter
+		/*
+		function myFunc(a,b){
+			return a * b;
+		}
+
+		document.getElementById("head").innerHTML = myFunc(4,3);// call function
+
+		*/
+
+
+		// application of call() and apply
+
+		const naam = [1,2,3];
+
+		var obj = {name:"sandeep", sname:"bashyal"};
+
+		function myFunc(a,b,c){
+			return a * b *c + this.name;
+		}
+
+		//document.getElementById("head").innerHTML = myFunc.call(obj, 4,5);// call() will help us to execute obj from function (4,5) is parametetr for func
+
+		// in order to pass array apply method is used
+
+
+		document.getElementById("head").innerHTML = myFunc.apply(obj, naam);
+
+
+
+
+
+
+
+
+		
+	</script>
+
+</body>
+</html>

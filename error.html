@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>error in JS</title>
+</head>
+<body>
+	<h1 id="head"></h1>
+	<h1 id="demo"></h1>
+	<!--<input id="getin" type="text">
+	<button id="botton" onclick="myfunc()">Test</button>-->
+	<!--
+	<button id="botton" onclick="this.style.color='red'">Test</button> here color is will be red once the button is clicked-->
+	<!--<p onmouseover="this.style.color='red'">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+-->
+
+	<script type="text/javascript">
+
+		// use of const 
+
+		//const PI = 3.1444;// once the value is assign we cannot assign PI once more
+		//const PI = 3.144455;// this cannoot be done with same constant term
+
+		myfunc();
+
+		 function myfunc(){
+		 	//const x = 10;// const should be declared with value 
+		 	//const x; // we cannnot do this in const keyword and assigned later x =10, this is wrong
+		 	//x = 10;
+
+		 	const naam = ["ram", "shyam", "hari"];
+
+		 	naam.push("panipuri");
+
+		 	
+		 	document.getElementById("head").innerHTML = naam;
+		 }
+
+
+
+		//for( var i=0; i < 5; i++)
+		/*
+		for(let i =0 ; i<5; i++){// let id block variabe which is executed within block of code
+			document.getElementById("head").innerHTML += i + "<br>";
+		}
+
+		document.getElementById("demo").innerHTML = i + "<br>";// var can be accessed from any where
+		/*
+
+		// local and global variable
+		/*
+		var x = 4;// here 4 is global variable so inside the function even there is no variable function accept these value
+		myfunc();
+
+		function myfunc(){
+			var y = 10;// y is local variable since it is inside the function my func()
+			document.getElementById("head").innerHTML = x + "<br>"+ y;
+		}
+
+		*/
+
+		// use of let and var
+		/*
+
+		function myfunc(){
+			var x = 5;// var is inside the function 
+			document.getElementById("demo").innerHTML= x + "<br>";
+
+			for(let i=0 ; i<5; i++){// let is inside the loop
+				document.getElementById("head").innerHTML += i + "<br>";
+			}
+		}
+		*/
+
+
+
+
+		// try and catch error
+
+		/*
+		var x= 10;
+
+		try{
+			name();// we write an undefined function which resilt an undefined function
+
+		}
+
+		catch(err){
+			document.getElementById("head").innerHTML = err.message;// this will give the error message about the code written in try
+		}
+
+		finally{
+			document.write("this statement will always execute");// this statement will always execute whatever the catch and try does
+		}
+		*/
+
+		// use of throw error along with catch and try
+		/*
+		function myfunction(){
+			var x;
+			x = document.getElementById("getin").value;// the value is assigned to variable x
+
+			try{
+				if(x=="") throw "please input some number";// if there is nothing then this will be executed through catch
+
+				if(x==5) throw "my name is sandeep";
+
+				if(isNaN(x)) throw "this is not a number";
+
+				if(x>10) throw "the number is greater than 10";
+
+				if(x<10) throw "the number is smaller than 10"
+			}
+
+			catch(err){// once value is matched then message will be assigned to error
+				document.getElementById("head").innerHTML = err +"<br>" ;
+			}
+			
+		}
+		*/
+
+		// reference error
+		/*
+
+		var x = "sandeep";
+
+		try{
+			 //x= y+1;// here y is undefined so error will be reference error
+			 //x.toNumber(x);// strings cannot be converted into number so type error 
+			 x.toUpperCase(x);
+
+		}
+		catch(err){
+			document.getElementById("head").innerHTML = err.name; // if there is no error in try then catch will be executed
+		}
+
+		finally{
+			document.getElementById("demo").innerHTML = x;
+		}
+		*/
+
+		// strict mode
+		/*
+		"use strict";
+
+		x = 1.5;
+
+		document.getElementById("head").innerHTML = x;
+		*/
+
+		// this in method
+		/*
+
+		var x = {fname:"sandeep",
+				lname:"bashyal",
+				address:"parsahawa",
+				fulldetail: function(){
+					return this.fname + " " + this.lname + "  " + this.address;// this refer to x which is object variable
+				}
+
+				};
+
+		document.getElementById("head").innerHTML = x.fulldetail();// this will display the value assigne with fullname
+		*/
+		/*
+		var x=5;
+		document.getElementById("head").innerHTML = this;// this will refer to global object[window onject]
+
+		*/
+		
+
+
+
+	</script>
+
+</body>
+</html>
